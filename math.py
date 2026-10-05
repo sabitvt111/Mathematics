@@ -1,13 +1,22 @@
 #include <iostream>
+#using namespace std;
+
 print("================================\n"
       "         AREA OF SQUARE\n"
       "================================\n")
+#Loop
 print("\nGive informations below and I'll show you the area of your square\n")
-ln = input("Enter Length: ")
-wd = input("Enter Width: ")
-un = input("What unit? ")
-
-print("\nResult:", float(float(ln)*float(wd)), "square", un)
+while True:
+	ln = input("Enter Length: ")
+	wd = input("Enter Width: ")
+	un = input("What unit? ")
+	if float(ln) < float(wd):
+		print("\nWidth can't be greater than Length!\nPlease enter again\n")
+		continue
+		
+	print("\nResult:", float(float(ln)*float(wd)), "square", un)
+	break
+#Loop ended
 print("\n================================\n"
       "      PERIMETRE OF SQUARE\n"
         "================================\n")
@@ -18,7 +27,7 @@ uni = input("What unit? ")
 
 print("\nPerimeter:", float(2*(float(dor)+float(pro))), uni)
 print("\n================================\n"
-        "         AREA OF TRIANGLE\n"
+        "        AREA OF TRIANGLE\n"
         "================================\n")
 print("\nGive informations below and I'll show you the area of your triangle\n")
 bs = input("Enter Base Length: ")
